@@ -1,0 +1,11 @@
+---
+const req = Astro.request;
+import Layout from "../layouts/Layout.astro"
+import {MyAuth} from "../components/MyAuth"
+import {logRequest} from "../utils"
+logRequest(req);
+---
+<Layout>
+<MyAuth client:only="react">
+aa
+</Layout>

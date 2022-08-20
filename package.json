@@ -10,9 +10,12 @@
     "astro": "astro"
   },
   "devDependencies": {
+    "@astrojs/react": "^1.0.0",
     "astro": "^1.0.6"
   },
   "dependencies": {
-    "@astrojs/vercel": "^1.0.0"
+    "@astrojs/vercel": "^1.0.0",
+    "@supabase/supabase-js": "^1.35.6",
+    "@supabase/ui": "^0.36.5"
   }
 }
