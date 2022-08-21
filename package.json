@@ -10,11 +10,15 @@
     "astro": "astro"
   },
   "devDependencies": {
+    "@astrojs/mdx": "^0.10.0",
     "@astrojs/react": "^1.0.0",
+    "@astrojs/tailwind": "^1.0.0",
+    "@tailwindcss/typography": "^0.5.4",
     "astro": "^1.0.6"
   },
   "dependencies": {
     "@astrojs/vercel": "^1.0.0",
+    "@fontsource/outfit": "^4.5.9",
     "@supabase/supabase-js": "^1.35.6",
     "@supabase/ui": "^0.36.5"
   }

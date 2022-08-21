@@ -28,3 +28,13 @@ if (!isLoggedIn(cookie)) {
 #### Problems
 
 `<MyAuth client:only="react">`
+
+
+
+### Improvements
+
+* Add tailwind
+* Build login screen
+* Build register screen
+* Proper error handling for expired JWTs
+* Common auth part for all sub pages

@@ -1,24 +1,5 @@
 import type Request from 'astro';
-import {supabase} from "./auth";
 
-const regex = /sa=(\w*\.\w*\.\w*)/g;
-
-export async function isLoggedIn(req: Request) {
-    const cookie = req.headers.get('cookie');
-    const m = regex.exec(cookie ?? "")
-    if (!m || m.length <= 1) {
-        return false
-    }
-    const token = m[1];
-    console.log(token);
-    const { user } = await supabase.auth.api.getUser(token);
-    if(!user || user.role !== "authenticated") {
-        return false
-    }
-    console.log("logged in as ", user.email)
-    // console.log(cookie);
-    return true
-}
 
 export async function logRequest(req: Request) {
     // console.log(req);

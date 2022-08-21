@@ -1,13 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { isLoggedIn } from '../utils.ts';
+import { isLoggedIn } from '../auth.ts';
 
 const req = Astro.request;
 
 if (!await isLoggedIn(req)) {
-return Astro.redirect('/login');
+    return Astro.redirect('/login');
 }
 ---
-<Layout>
-    You are logged in
+
+<Layout title="Welcome to Astro">
+    hello
 </Layout>

@@ -3,9 +3,9 @@ console.log('AUTH !!!!!!!!!!');
 import {supabase} from "../../auth"
 
 const req = Astro.request;
-const a = await Astro.request.json();
+const a = await Astro.request.text();
 console.log(a);
-const b = await Astro.request.json();;
+const b = JSON.parse(a);
 Astro.response.headers.set('Set-Cookie', `sa=${b.session.access_token}; Path=/;`);
 
 // supabase.auth.api.setAuthCookie(Astro.request, Astro.response);

@@ -1,11 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import AuthBasic from '../components/AuthBasic';
 const url  = Astro.url
 ---
 
 
 <Layout title="Welcome to Astro">
     You are not logged in {url}
-
-
+    <div>
+        <AuthBasic client:load/>
+    </div>
 </Layout>
