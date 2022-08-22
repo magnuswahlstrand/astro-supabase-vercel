@@ -1,13 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import AuthBasic from '../components/AuthBasic';
-const url  = Astro.url
+import LoginOrRegister from '../components/LoginOrRegister';
+
+import {getUser} from '../auth';
+const user = await getUser(Astro.request);
+console.log(user)
 ---
 
 
-<Layout title="Welcome to Astro">
-    You are not logged in {url}
-    <div>
-        <AuthBasic client:load/>
-    </div>
+<Layout title="Welcome to Astro" user={user}>
+    <LoginOrRegister client:load/>
 </Layout>

@@ -1,11 +1,31 @@
 ---
 const req = Astro.request;
 import Layout from "../layouts/Layout.astro"
-import {MyAuth} from "../components/MyAuth"
-import {logRequest} from "../utils"
-logRequest(req);
 ---
 <Layout>
-<MyAuth client:only="react">
-aa
+    <script>
+        async function parseMagicLink(req) {
+            const vals = window.location.hash.substring(1).split("&").map(kv => kv.split("="))
+            const hashParameters = new Map(vals)
+            console.log(hashParameters)
+
+            const data = await fetch("/api/login", {
+                method: "POST",
+                headers: new Headers({"Content-Type": "application/json"}),
+                credentials: "same-origin",
+                body: JSON.stringify({
+                    access_token: hashParameters.get('access_token'),
+                    expires_in: hashParameters.get('expires_in'),
+                    refresh_token: hashParameters.get('refresh_token'),
+                }),
+            })
+
+            if(data.ok) {
+                window.location.replace('/');
+            }
+        }
+        parseMagicLink()
+    </script>
+<!--<MyAuth client:only="react">-->
+
 </Layout>

@@ -1,9 +1,13 @@
 ---
+import LoginStatus from "../components/LoginStatus.astro"
+
 export interface Props {
 title: string;
+user: object;
 }
 
-const { title } = Astro.props as Props;
+const { title, user } = Astro.props as Props;
+const isLoggedIn = !(user == null);
 
 import '@fontsource/outfit/300.css';
 import '@fontsource/outfit/400.css';
@@ -22,13 +26,13 @@ import '@fontsource/outfit/700.css';
 <body>
 <div class="container mx-auto px-4 font-outfit">
     <div class="flex flex-col items-center pt-20 prose-a:text-blue-800">
-        <h1 class="text-7xl">Astro + Supabase + Vercel</h1>
-        <div class="text-lg pt-5 ">You are not logged in 😔</div>
-        <div class="pt-10 max-w-xl">
-            <article class="prose-lg lg:prose-xl">
-                <slot/>
-            </article>
-        </div>
+        <h1 class="text-3xl md:text-7xl">Astro + Supabase + Vercel</h1>
+        <LoginStatus isLoggedIn={isLoggedIn}/>
+            <div class="pt-10 max-w-xl">
+                <article class="prose-lg lg:prose-xl">
+                    <slot/>
+                </article>
+            </div>
     </div>
 </div>
 </body>

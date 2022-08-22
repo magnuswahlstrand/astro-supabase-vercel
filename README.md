@@ -38,3 +38,8 @@ if (!isLoggedIn(cookie)) {
 * Build register screen
 * Proper error handling for expired JWTs
 * Common auth part for all sub pages
+* Fix Secure and HttpOnly cookies
+
+
+### Questions
+Set cookie AND redirect?

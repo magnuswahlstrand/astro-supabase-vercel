@@ -1,0 +1,18 @@
+
+
+---
+import Social from '../components/Social.astro';
+import Layout from '../layouts/Layout.astro';
+
+import {Content} from './index-description.md';
+
+
+import {getUser} from '../auth';
+const user = await getUser(Astro.request);
+console.log(user);
+---
+
+<Layout title={"Hello"} user={user}>
+    <Content />
+    <Social />
+</Layout>

@@ -1,0 +1,13 @@
+---
+const { isLoggedIn } = Astro.props as Props;
+console.log("prop", isLoggedIn)
+---
+
+<div class="text-lg pt-5 ">
+    {isLoggedIn ? (
+    <div>
+        You are logged in 😎🎉!
+        <a href="/logout" class="underline">Log out</a>
+    </div>
+    ) : "You are not logged in 😔"}
+</div>
