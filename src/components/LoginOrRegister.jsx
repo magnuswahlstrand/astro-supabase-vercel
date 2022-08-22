@@ -13,9 +13,11 @@ export default function Login() {
     const handleSendLink = async () => {
         console.log('Login in...')
         setStatus({error: '', success: false})
+        // TODO base redirect on env var
+
         const result = await supabase.auth.signIn(
             {email: email},
-            {redirectTo: 'http://localhost:3000/magic-link',}
+            {redirectTo: 'https://astro-supabase-vercel-git-main-magnuswahlstrand.vercel.app/magic-link',}
         )
         console.log(result)
         if (result?.error?.message) {
