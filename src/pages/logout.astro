@@ -1,9 +1,10 @@
 ---
-import Layout from '../layouts/Layout.astro';
-Astro.response.headers.set('Set-Cookie', `sbat=removed; Max-Age=-1; Path=/;`);
+return new Response(null, {
+    status: 302,
+    statusText: 'Not found',
+    headers: new Headers({
+        'Set-Cookie': 'sbat=removed; Max-Age=-1; Path=/;',
+        'Location': '/',
+    })
+});
 ---
-
-
-<Layout title="Welcome to Astro">
-    You are logged out. <a href="/" class="underline">Go back!</a>
-</Layout>

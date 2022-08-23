@@ -31,14 +31,27 @@ if (!isLoggedIn(cookie)) {
 
 
 
-### Improvements
+### Todo
 
-* Add tailwind
-* Build login screen
-* Build register screen
-* Proper error handling for expired JWTs
-* Common auth part for all sub pages
-* Fix Secure and HttpOnly cookies
+* [ ] Proper error handling for expired JWTs
+* [ ] Common auth part for all sub pages
+* [ ] Add outline to README
+* [ ] Clean up code
+* [ ] Remove console.log()
+* [ ] Fix Secure and HttpOnly cookies
+* [ ] **Minor**
+
+#### Done
+
+* [x] Add tailwind
+* [x] Build login screen
+* [x] Build register screen
+* [x] Add spinner for link
+* [x] Remove Supabase key from code
+* [x] Fix redirects after logout
+* [x] **Minor**
+  * [x] Fix margin bottom
+  * [x] Remove content on 2nd paragraph
 
 
 ### Questions
