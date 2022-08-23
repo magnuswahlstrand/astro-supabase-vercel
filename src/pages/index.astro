@@ -5,10 +5,10 @@ const user = await getUser(Astro.request);
 import Social from '../components/Social.astro';
 import Layout from '../layouts/Layout.astro';
 
-import {Content as IndexContent} from './content/index-description.md';
+import {Content} from './content/content-home.md';
 ---
 
 <Layout title="Astro + Supabase + Vercel" user={user}>
-    <IndexContent />
+    <Content />
     <Social />
 </Layout>

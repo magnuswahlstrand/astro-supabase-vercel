@@ -7,7 +7,7 @@ a mix of static site generation **(SSG)**, and server side rendering **(SSR)**. 
 
 ### Demo
 
-Check out the demo at [astro-supabase-vercel-git-main-magnuswahlstrand.vercel.app](https://astro-supabase-vercel-git-main-magnuswahlstrand.vercel.app/).
+Check out the demo at: [astro-supabase-vercel-git-main-magnuswahlstrand.vercel.app](https://astro-supabase-vercel-git-main-magnuswahlstrand.vercel.app/).
 
 ### Limitations
 * To improve security, the cookies for this app should be **Secure** and **HttpOnly** cookies.
@@ -43,6 +43,5 @@ Check out the demo at [astro-supabase-vercel-git-main-magnuswahlstrand.vercel.ap
 * Can we set server side cookie AND redirect? - Yes
 * https://docs.astro.build/en/guides/server-side-rendering/#astrorequestheaders
 * ```npm install @astrojs/vercel```
-
-**Problems**
-* `<MyAuth client:only="react">`
+* **Problems**
+  *`<MyAuth client:only="react">`
