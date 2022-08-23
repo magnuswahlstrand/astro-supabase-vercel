@@ -1,9 +1,10 @@
 ---
+import { SEO } from "astro-seo";
 import LoginStatus from "../components/LoginStatus.astro"
 
 export interface Props {
-    title: string;
-    user: object;
+title: string;
+user: object;
 }
 
 const { title, user } = Astro.props as Props;
@@ -22,17 +23,34 @@ import '@fontsource/outfit/700.css';
     <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
     <meta name="generator" content={Astro.generator}/>
     <title>Demo: {title}</title>
+
+    <SEO
+        title="Astro Supabase Vercel demo"
+        description="App prototype built with Astro and Supabase authentication, deployed to Vercel"
+        twitter.card="summary"
+        twitter.site="@wahlstra"
+        extend={{
+            meta: [
+                {
+                    name: "twitter:image",
+                    content: "https://astro-supabase-vercel.vercel.app/preview.png",
+                },
+                    { name: "twitter:title", content: "Astro Supabase Vercel demo" },
+                    { name: "twitter:description", content: "App prototype built with Astro and Supabase authentication, deployed to Vercel" },
+                ],
+        }}
+    />
 </head>
 <body>
 <div class="container mx-auto px-4 font-outfit">
     <div class="flex flex-col items-center pt-20 pb-12 prose-a:text-blue-800 prose-blockquote:text-gray-500 prose-blockquote:border-l prose-blockquote:border-l-4 prose-blockquote:border-emerald-500 prose-blockquote:font-light">
         <h1 class="text-3xl md:text-7xl">Astro + Supabase + Vercel</h1>
         <LoginStatus isLoggedIn={isLoggedIn}></LoginStatus>
-            <div class="pt-8 max-w-xl">
-                <article class="prose-lg lg:prose-xl">
-                    <slot/>
-                </article>
-            </div>
+        <div class="pt-8 max-w-xl">
+            <article class="prose-lg lg:prose-xl">
+                <slot/>
+            </article>
+        </div>
     </div>
 </div>
 </body>

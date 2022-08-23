@@ -26,6 +26,7 @@ at: [astro-supabase-vercel-git-main-magnuswahlstrand.vercel.app](https://astro-s
 
 #### Done
 
+* [x] Add social media preview
 * [x] Add tailwind
 * [x] Build login screen
 * [x] Build register screen

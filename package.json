@@ -23,6 +23,7 @@
     "@fontsource/outfit": "^4.5.9",
     "@supabase/supabase-js": "^1.35.6",
     "@supabase/ui": "^0.36.5",
+    "astro-seo": "^0.5.1",
     "cookie": "^0.5.0"
   }
 }
