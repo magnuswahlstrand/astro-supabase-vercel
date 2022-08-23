@@ -1,45 +1,31 @@
 # Astro-Supabase-Vercel
 
-An example app with Astro, Supabase and Vercel.
+This repo contains an example app showcasing how to use [**Supabase**](https://supabase.com/) authentication with
+[**Astro**](https://astro.build). We use **Supabase** is used for user sign-up and authentication, and Astro for
+a mix of static site generation **(SSG)**, and server side rendering **(SSR)**. The app is deployed to
+[**Vercel**](https://vercel.com).
 
-## Development
-```sh
-npm install @astrojs/vercel
-```
+### Demo
 
+Check out the demo at [astro-supabase-vercel-git-main-magnuswahlstrand.vercel.app](https://astro-supabase-vercel-git-main-magnuswahlstrand.vercel.app/).
 
-https://docs.astro.build/en/guides/server-side-rendering/#astrorequestheaders
-```js
-import { isLoggedIn } from '../utils';
-
-const cookie = Astro.request.headers.get('cookie');
-
-// If the user is not logged in, redirect them to the login page
-if (!isLoggedIn(cookie)) {
-  return Astro.redirect('/login');
-}
----
-<html>
-  <!-- Page here... -->
-</html>
-```
+### Limitations
+* To improve security, the cookies for this app should be **Secure** and **HttpOnly** cookies.
+* We don't handle automatic renewal of JWTs.
+* Error handling is minimal
 
 
-#### Problems
-
-`<MyAuth client:only="react">`
-
-
+# Development log
 
 ### Todo
 
 * [ ] Proper error handling for expired JWTs
 * [ ] Common auth part for all sub pages
-* [ ] Add outline to README
 * [ ] Clean up code
 * [ ] Remove console.log()
 * [ ] Fix Secure and HttpOnly cookies
 * [ ] **Minor**
+  * [ ] Fix page titles
 
 #### Done
 
@@ -49,10 +35,16 @@ if (!isLoggedIn(cookie)) {
 * [x] Add spinner for link
 * [x] Remove Supabase key from code
 * [x] Fix redirects after logout
+* [x] Add outline to README
 * [x] **Minor**
   * [x] Fix margin bottom
   * [x] Remove content on 2nd paragraph
 
+  
+### Notes and questions
+* Can we set server side cookie AND redirect? - Yes
+* https://docs.astro.build/en/guides/server-side-rendering/#astrorequestheaders
+* ```npm install @astrojs/vercel```
 
-### Questions
-Set cookie AND redirect?
+**Problems**
+* `<MyAuth client:only="react">`
