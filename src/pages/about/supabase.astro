@@ -6,8 +6,10 @@ const user = await getUser(Astro.request);
 if (!user) {
     return Astro.redirect('/login');
 }
+
+import {Content} from '../content/content-supabase.md';
 ---
 
 <Layout title="About Supabase" user={user}>
-    Something about Supabase
+    <Content />
 </Layout>

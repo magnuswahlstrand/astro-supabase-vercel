@@ -20,6 +20,7 @@ Check out the demo at: [astro-supabase-vercel-git-main-magnuswahlstrand.vercel.a
 ### Todo
 * [ ] Add 2 paragraphs of text per about page
 * [ ] Proper error handling for expired JWTs
+* [ ] Redirect after sign in
 * [ ] Fix Secure and HttpOnly cookies
 
 #### Done
