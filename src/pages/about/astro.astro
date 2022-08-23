@@ -6,8 +6,10 @@ const user = await getUser(Astro.request);
 if (!user) {
     return Astro.redirect('/login');
 }
+
+import {Content} from '../content/content-astro.md';
 ---
 
 <Layout title="About Astro" user={user}>
-    Something about Astro
+    <Content />
 </Layout>

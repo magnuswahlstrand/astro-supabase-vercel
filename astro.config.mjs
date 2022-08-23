@@ -9,7 +9,7 @@ import mdx from "@astrojs/mdx";
 export default defineConfig({
   output: 'server',
   adapter: vercel(),
-  integrations: [react(), tailwind(), mdx()],
+  integrations: [react(), tailwind()],
   vite: {
     ssr: {
       noExternal: ["@fontsource/outfit"]
