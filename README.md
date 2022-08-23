@@ -18,14 +18,9 @@ Check out the demo at [astro-supabase-vercel-git-main-magnuswahlstrand.vercel.ap
 # Development log
 
 ### Todo
-
+* [ ] Add 2 paragraphs of text per about page
 * [ ] Proper error handling for expired JWTs
-* [ ] Common auth part for all sub pages
-* [ ] Clean up code
-* [ ] Remove console.log()
 * [ ] Fix Secure and HttpOnly cookies
-* [ ] **Minor**
-  * [ ] Fix page titles
 
 #### Done
 
@@ -36,10 +31,13 @@ Check out the demo at [astro-supabase-vercel-git-main-magnuswahlstrand.vercel.ap
 * [x] Remove Supabase key from code
 * [x] Fix redirects after logout
 * [x] Add outline to README
+* [x] Common auth part for all sub pages
+* [x] Remove console.log()
+* [x] Clean up code
 * [x] **Minor**
   * [x] Fix margin bottom
   * [x] Remove content on 2nd paragraph
-
+  * [x] Fix page titles
   
 ### Notes and questions
 * Can we set server side cookie AND redirect? - Yes

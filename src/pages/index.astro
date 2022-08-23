@@ -1,22 +1,14 @@
-
-
 ---
+import {getUser} from '../auth';
+const user = await getUser(Astro.request);
+
 import Social from '../components/Social.astro';
 import Layout from '../layouts/Layout.astro';
 
 import {Content as IndexContent} from './content/index-description.md';
-
-
-import {getUser} from '../auth';
-const user = await getUser(Astro.request);
-console.log(user);
-
-
-console.log(import.meta.env.SUPABASE_URL);
-console.log(`${import.meta.env.SUPABASE_URL}`);
 ---
 
-<Layout title={"Hello"} user={user}>
+<Layout title="Astro + Supabase + Vercel" user={user}>
     <IndexContent />
     <Social />
 </Layout>

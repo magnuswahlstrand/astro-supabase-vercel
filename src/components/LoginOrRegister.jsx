@@ -1,9 +1,5 @@
 import {useState} from 'react'
-
-
-
 import {supabase} from '../auth'
-
 
 function Spinner() {
     return <div role="status" className="absolute pl-2 left-0">
@@ -22,26 +18,15 @@ function Spinner() {
 
 export default function Login() {
     const [email, setEmail] = useState('')
-
     const [status, setStatus] = useState({error: '', success: false, isLoading: false})
 
-
-
     const handleSendLink = async () => {
-        console.log('Login in...')
-        console.log(import.meta.env.SUPABASE_URL);
-        console.log(`${import.meta.env.SUPABASE_URL}`);
-
         setStatus({error: '', success: false, isLoading: true})
-        // TODO base redirect on env var
 
         const result = await supabase.auth.signIn(
             {email: email},
             {redirectTo: import.meta.env.PUBLIC_REDIRECT_URL},
-            // {redirectTo: 'http://localhost:3000/magic-link',}
-            // {redirectTo: 'https://astro-supabase-vercel-git-main-magnuswahlstrand.vercel.app/magic-link',}
         )
-        console.log(result)
         if (result?.error?.message) {
             setStatus(() => ({
                 error: result.error.message,

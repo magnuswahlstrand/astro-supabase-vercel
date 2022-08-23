@@ -9,16 +9,13 @@ export const supabase = createClient(
 export async function getUser(req: Request) {
     const c = cookie.parse(req.headers.get('cookie') ?? "");
     if (!c.sbat) {
-        console.log('aa', c)
         return null
     }
 
     const resp = await supabase.auth.api.getUser(c.sbat);
     if (!resp.user || resp.user.role !== "authenticated") {
-        console.log('bb', resp)
         return null
     }
-    console.log('cc', resp.user)
     return resp.user
 }
 

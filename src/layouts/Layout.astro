@@ -21,13 +21,13 @@ import '@fontsource/outfit/700.css';
     <meta name="viewport" content="width=device-width"/>
     <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
     <meta name="generator" content={Astro.generator}/>
-    <title>{title}</title>
+    <title>Demo: {title}</title>
 </head>
 <body>
 <div class="container mx-auto px-4 font-outfit">
-    <div class="flex flex-col items-center pt-20 prose-a:text-blue-800">
+    <div class="flex flex-col items-center pt-20 pb-12 prose-a:text-blue-800">
         <h1 class="text-3xl md:text-7xl">Astro + Supabase + Vercel</h1>
-        <LoginStatus isLoggedIn={isLoggedIn}/>
+        <LoginStatus isLoggedIn={isLoggedIn}></LoginStatus>
             <div class="pt-10 max-w-xl">
                 <article class="prose-lg lg:prose-xl">
                     <slot/>

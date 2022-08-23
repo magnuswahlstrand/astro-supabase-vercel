@@ -1,9 +1,6 @@
 ---
-console.log('AUTH !!!!!!!!!!');
 import {supabase} from "../../auth"
 
-const b = await Astro.request.json();
-console.log(b);
-
-Astro.response.headers.set('Set-Cookie', `sbat=${b.access_token}; Path=/;`);
+const body = await Astro.request.json();
+Astro.response.headers.set('Set-Cookie', `sbat=${body.access_token}; Path=/;`);
 ---
