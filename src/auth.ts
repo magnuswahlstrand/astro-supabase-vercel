@@ -12,11 +12,11 @@ export async function getUser(req: Request) {
         return null
     }
 
-    const resp = await supabase.auth.api.getUser(c.sbat);
-    if (!resp.user || resp.user.role !== "authenticated") {
+    const { data: { user } } = await supabase.auth.getUser(c.sbat);
+    if (!user || user.role !== "authenticated") {
         return null
     }
-    return resp.user
+    return user
 }
 
 export async function isLoggedIn(req: Request) {
