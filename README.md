@@ -21,6 +21,7 @@ at: [astro-supabase-vercel.vercel.app](https://astro-supabase-vercel.vercel.app/
 
 ### Todo
 
+* [ ] Fix [issue #4](/../../issues/4)
 * [ ] Proper error handling for expired JWTs
 * [ ] Fix Secure and HttpOnly cookies
 
