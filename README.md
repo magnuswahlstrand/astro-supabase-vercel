@@ -8,7 +8,7 @@ a mix of static site generation **(SSG)**, and server side rendering **(SSR)**. 
 ### Demo
 
 Check out the demo
-at: [astro-supabase-vercel-git-main-magnuswahlstrand.vercel.app](https://astro-supabase-vercel-git-main-magnuswahlstrand.vercel.app/)
+at: [astro-supabase-vercel.vercel.app](https://astro-supabase-vercel.vercel.app/)
 .
 
 ### Limitations
