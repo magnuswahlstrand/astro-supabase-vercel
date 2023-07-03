@@ -23,12 +23,12 @@ export default function Login() {
     const handleSendLink = async () => {
         setStatus({error: '', success: false, isLoading: true})
         
-        const { error } = await supabase.auth.signInWithOtp({
-            email: email
-        }, {
-            redirectTo: import.meta.env.PUBLIC_REDIRECT_URL
+const { error } = await supabase.auth.signInWithOtp({
+            email: email,
+            options: {
+                emailRedirectTo: import.meta.env.PUBLIC_REDIRECT_URL
+            }
         })
-
         if (error?.message) {
             setStatus(() => ({
                 error: result.error.message,
